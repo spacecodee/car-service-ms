@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: car-service
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/car-service
+    username: root
+    password: spacecodee
+  sql:
+    init:
+      platform: org.hibernate.dialect.MySQL8Dialect
+  gson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
