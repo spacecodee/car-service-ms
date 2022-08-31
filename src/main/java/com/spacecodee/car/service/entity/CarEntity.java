@@ -2,8 +2,9 @@ package com.spacecodee.car.service.entity;
 
 import lombok.*;
 
-import javax.persistence.*;
 import java.util.Objects;
+import javax.persistence.*;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,18 +14,19 @@ import java.util.Objects;
 @Entity
 @Table(name = "car", schema = "car-service")
 public class CarEntity {
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "car_id", nullable = false)
+    @Column(name = "car_id")
     private int carId;
     @Basic
-    @Column(name = "car_model", nullable = false, length = 100)
+    @Column(name = "car_model")
     private String carModel;
     @Basic
-    @Column(name = "car_brand", nullable = false, length = 100)
+    @Column(name = "car_brand")
     private String carBrand;
     @Basic
-    @Column(name = "car_user_id", nullable = false)
+    @Column(name = "car_user_id")
     private int carUserId;
 
     @Override public boolean equals(Object o) {
